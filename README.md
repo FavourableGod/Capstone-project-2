@@ -60,13 +60,12 @@ dashboard that presents my analysis.
 1. Data loading and Inspection
 2. Handling missing variables
 3. Data Cleaning and Formatting
-4. Segmentation: Group customers by demographics,subscription type, and usage patterns,Identify high-value customer segments and factors influencing retention.
-5. Trend Analysis: Track trends in subscriptions, cancellations, and renewals over time.
-
 
 ### Exploratory Data Analysis:
 ---
 This involved the exploratory of the Data to answer some questions about the data such as;
+- Segmentation: Group customers by demographics,subscription type, and usage patterns,Identify high-value customer segments and factors influencing retention.
+- Trend Analysis: Track trends in subscriptions, cancellations, and renewals over time
 - Retrieve the total number of customers from each region.
 - Find the most popular subscription type by the number of customers.
 - Find customers who canceled their subscription within 6 months.
