@@ -22,8 +22,11 @@
 
 ### Project Overview
 ---
- This dataset contains transactional sales data, offering a comprehensive view of customer orders. It includes details on products, regions, and revenue, making it ideal for analyzing sales trends and regional performance. The dataset enables insights into revenue drivers and identifies high-demand products.
-
+ 
+ This project involves analyzing customer data for a subscription service to identify 
+segments and trends. Your goal is to understand customer behavior, track subscription types, 
+and identify key trends in cancellations and renewals. The final deliverable is a Power BI 
+dashboard that presents your analysis. 
 ### Column Descriptions
 ---
 OrderID: A distinct identifier assigned to each order.
