@@ -60,6 +60,9 @@ dashboard that presents my analysis.
 1. Data loading and Inspection
 2. Handling missing variables
 3. Data Cleaning and Formatting
+4. Segmentation: Group customers by demographics,subscription type, and usage patterns,Identify high-value customer segments and factors influencing retention.
+5. Trend Analysis: Track trends in subscriptions, cancellations, and renewals over time.
+
 
 ### Exploratory Data Analysis:
 ---
