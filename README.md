@@ -78,7 +78,7 @@ This involved the exploratory of the Data to answer some questions about the dat
 
 ### Data Analysis
 ---
-This is where we include some basic lines of code or queries or even some of the DAX expressions used during the analysis
+This is where I include some basic lines of code or queries or even some of the DAX expressions used during the analysis
 
 ```SQL
 SELECT * FROM [LITA Capstone Dataset 2]
@@ -157,7 +157,7 @@ GROUP BY
 ```
 
 
-### Data Vitualization
+### Data Visualization
 ---
 
 
