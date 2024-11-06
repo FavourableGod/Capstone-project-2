@@ -81,11 +81,79 @@ This involved the exploratory of the Data to answer some questions about the dat
 This is where we include some basic lines of code or queries or even some of the DAX expressions used during the analysis
 
 ```SQL
-SELECT * FROM CAPSTONE DATA 
+SELECT * FROM [LITA Capstone Dataset 2]
+```
+------- retrieve the total number of customers from each region -------
 
-````SELECT Product, SUM(Quantity * UnitPrice) AS TotalSale
-FROM [LITA Capstone Dataset]
-GROUP BY Products 
+```SQL
+Select  region, count(Customerid) as total_customers 
+from [LITA Capstone Dataset 2]
+Group by region;
+```
+
+-------- find the most popular subscription type by the number of customers-----
+
+```SQL
+Select top 1 subscriptiontype, count(customerid) as total_customers
+From [LITA Capstone Dataset 2]
+Group by subscriptiontype 
+Order by total_customers desc;
+```
+
+----- find customers who canceled their subscription within 6 months------
+
+```SQL
+SELECT CustomerID, CustomerName, SubscriptionStart, SubscriptionEnd, Canceled, Revenue, TOTAL_SUBSCRIPTION
+FROM [LITA Capstone Dataset 2]
+WHERE Canceled = 1
+AND DATEDIFF(day, SubscriptionStart, SubscriptionEnd) <= 182;
+```
+
+----- calculate the average subscription duration for all customers ----
+
+```SQL
+SELECT AVG(DATEDIFF(day, SubscriptionStart, SubscriptionEnd)) AS Avg_Subscription_Duration
+FROM [LITA Capstone Dataset 2];
+```
+
+--- find customers with subscriptions longer than 12 months ---
+
+```SQL
+SELECT CustomerID, CustomerName, Region, SubscriptionType, SubscriptionStart, SubscriptionEnd, Canceled, Revenue, TOTAL_SUBSCRIPTION
+FROM [LITA Capstone Dataset 2]
+WHERE DATEDIFF(day, SubscriptionStart, SubscriptionEnd) > 365;
+```
+
+------ calculate total revenue by subscription type -----
+
+```SQL
+Select subscriptiontype,
+Sum(revenue) as total_revenue 
+From [LITA Capstone Dataset 2]
+Group by subscriptiontype;
+```
+
+----- find the top 3 regions by subscription cancellations ------
+
+```SQL
+SELECT TOP 3 Region, COUNT(*) AS Cancellations
+FROM [LITA Capstone Dataset 2]
+WHERE Canceled = 'TRUE'
+GROUP BY Region
+ORDER BY Cancellations DESC;
+```
+
+
+ ---- find the total number of active and canceled subscriptions -----
+
+ ```SQL
+SELECT 
+    Canceled,
+    COUNT(*) AS SubscriptionCount
+FROM 
+    [LITA Capstone Dataset 2]
+GROUP BY 
+    Canceled
 ```
 
 
